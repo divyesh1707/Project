@@ -3,179 +3,226 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html {
+    /* font-size: 10px;
+    10px / 16px = 0.625 = 62.5 */
+    font-size: 62.5%;
+}
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
 }
-
-.main-page {
-    background-color: #C4C4C4;
+p {
+    font-size: 2rem;
 }
-
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
 .container {
-    max-width: 1200px;
-    height: 710px;
-    margin: 0 auto;
+    max-width: 320rem;
+    max-height: 698rem;
+    margin: 0 70px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-1 {
+    width: 8.33px;
+}
+.col-2 {
+    width: 16.66px;
+}
+.col-3 {
+    width: 25px;
+}
+.col-4 {
+    width: 33.33px;
+}
+.col-5 {
+    width: 41.66px;
+}
+.col-6 {
+    width: 50px;
+}
+.col-7 {
+    width: 58.33px;
+}
+.col-8 {
+    width: 66.66px;
+}
+.col-9 {
+    width: 75px;
+}
+.col-10 {
+    width: 83.33px;
+}
+.col-11 {
+    width: 91.66px;
+}
+.col-12 {
+    width: 100px;
+}
+
+/* ***************Header***************** */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color:grey; */
+    width: 100%;
+    transition: all 0.5s;
+    z-index: 9;
+}
+header .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-
-.logo {
-    margin-top: 50px;
+header nav {
+    margin: auto;
 }
-
-nav ul {
-    margin-top: 62px;
-}
-nav ul li {
+header nav ul li {
     display: inline-block;
-    text-decoration: none;
-
+    padding: 3.3rem;
 }
-
 nav ul li a {
-    text-decoration: none;
-    padding: 10px 25px;
     color: white;
-    margin: 5px;
+    font-size: 1.8rem;
+    font-weight: 600;
 }
-
 nav ul li a:hover {
-    color: black;
+    color: #020202;
 }
-
-nav ul i {
+header .search i {
+    font-size: 1.8rem;
     color: white;
+    padding-right: 10.3rem;
 }
-.navigation ul li:last-child a{
+.dark-header {
     background-color: black;
-    border-radius: 25px;
-    color: white;
 }
 
-h1 {
+
+/********* Hero Section ******************/
+
+#hero {
+    background: url(../images/banner.jpg);
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+#hero::before {
+    content: '';
     position: absolute;
-    left: 170px;
-    right: 700px;
-    top: 220px;
-    font-style: normal;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.hero-data {
+    position: absolute;
+    top: 30%;
+}
+.hero-data h1 {
     font-weight: 700;
     font-size: 90px;
     line-height: 110px;
-    color: white;
+    color: #FFFFFF;
+    margin-bottom: 3rem;
 }
-
-h2 {
-    position: absolute;
-    left: 170px;
-    right: 920px;
-    top: 470px;
-    font-style: normal;
+.hero-data p {
     font-weight: 500;
-    font-size: 18px;
-    line-height: 36px;
-    color: #CFCFCF;
+    font-size: 1.8rem;
+    line-height: 3.6rem;
+    color: #cfcfcf;
+    margin-bottom: 3rem;
 }
-
-.navigation {
-    position: absolute;
-    top: 510px;
-    right: 850px;
-    left: 170px;
-}
-
-.navigation ul {
-    border: 1px solid #CBCACA;
-    box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.3);
-    border-radius: 72px;
-    background-color: #FFFFFF;
-    height: 50px;
-    padding-top: 10px;
-}
-
-.navigation ul li a {
-    color: #CBCACA;
-    font-size: 14px;
-}
-
-h3 {
-    position: absolute;
-    top: 130px;
-    font-style: normal;
+.hero-data span {
     font-weight: 600;
-    font-size: 16px;
-    line-height: 36px;
+    font-size: ;
+    line-height: 3.6rem;
     color: #ECECEC;
 }
+#hero .search-data {
+    width: 73rem;
+    height: 8rem;
+    border-radius: 8rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    padding: 2rem 1.5rem;
+    margin-bottom: 4rem;
+}
+#hero .search-data select {
+    border: none;
+    font-size: 1.5rem;
+}
+#hero .search-data .explore-btn {
+    border: none;
+    padding: 2rem 3rem;
+    background-color: black;
+    color: white;
+    border-radius: 4rem;
 
-h4 {
-    position: absolute;
-    width: 740px;
-    height: 134.94px;
-    left: 386px;
-    top: 1038px;
 }
 
-.container2 .explore-new {
-    position: relative;
-}
+/*********************************/
 
-.container2 .explore-new h2 {
-    position: absolute;
-    top: 80px;
-    left: 380px;
-    color: black;
+/**********Explore Section********/
+#explore {
+    margin: 17.8rem 0;
+}
+.main-title h2 {
+    font-weight: 600;
     font-size: 60px;
     line-height: 70px;
     text-align: center;
-    width: 740px;
-    height: 150px;
+    color: #020202;
+    margin-bottom: 3rem;
 }
-
-.container2 .explore-new>h3 {
-    font-size: 20px;
-    top: 250px;
-    left: 460px;
+.main-title p {
+    font-weight: 500;
     font-size: 18px;
+    line-height: 36px;
+    text-align: center;
     color: #878787;
 }
 
-.container2 .explore-new .place {
-    display: flex;
-}
 
-.container2 .explore-new .place .place1 {
-    position: absolute;
-    width: 350px;
-    height: 361px;
-    top: 310px;
-    left: 160px;
-    background-color: #C4C4C4;
-    border-radius: 10px;
-}
+/*********************************/
 
-.container2 .explore-new .place .place2 {
-    position: absolute;
-    width: 350px;
-    height: 472px;
-    top: 310px;
-    left: 530px;
-    background-color: #C4C4C4;
-    border-radius: 10px;
-
-}
-
-.container2 .explore-new .place .place3 {
-    position: absolute;
-    width: 350px;
-    height: 361px;
-    top: 310px;
-    left: 900px;
-    background-color: #C4C4C4;
-    border-radius: 10px;
-}
-@media screen and (max-width: 984px) {
-    body{
-        width: 100%;
+@media screen and (max-width:768px) {
+    header nav ul {
+        position: absolute;
+        width: 70%;
+        height: 100vh;
+        background-color: grey;
+        top: 0;
+        right: 0;
+        transition: all 1s;
     }
+    header .search i {
+        display: none;
+    }
+    header nav ul li {
+        display: block;
+    }
+    nav ul>i {
+        margin-top: 2rem;
+        margin-left: 20.5rem;
+        font-size: 1.8rem;
+        color: white;
+    }
+    nav ul {
+        transition: all 1s;
+    }
+    .showHide {
+        right: -70%;
+    }
+
 }
